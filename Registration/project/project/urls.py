@@ -24,5 +24,5 @@ urlpatterns = [
     path("register/", views.register, name="register"),
     path("login/", views.login, name="login"),
     path("registerdata/", views.registerdata, name="registerdata"),
-    path("logindata/", views.logindata, name="logindata")
+    # path("logindata/", views.logindata, name="logindata")
 ]

@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from .models import Students
+from django.http import HttpResponse
 
 # Create your views here.
 
@@ -20,21 +22,28 @@ def registerdata(request):
     # print("META data:-\n", request.META, "\n")
     
     if request.method =="POST":
-        print("NAME:-", '\n' ,request.POST.get('name'))
-        print("E-MAIL:-", '\n' ,request.POST.get('email'))
-        print("CONTACT NO.:-", '\n' ,request.POST.get('contact'))
-        print("IMAGE:-", '\n' ,request.FILES.get('image'))
-        print("DOCUMENT:-", '\n' ,request.FILES.get('document'))
-        print("PASSWORD:-", '\n' ,request.POST.get('password'))
+        n= request.POST.get('name')
+        e= request.POST.get('email')
+        c= request.POST.get('contact')
+        i= request.FILES.get('image')
+        d= request.FILES.get('document')
+        # p= request.POST.get('password'))
+
+        # Queries
+    Students.objects.create(first_name=n, email=e, contact=c, image=i, document=d)
+    return HttpResponse("Registration Successful")
     
 
 
-def logindata(request):
-    print("Login data")
-    # print("Method used:-\n", request.method, "\n")
-    print("Post data:-\n",request.POST, "\n")
-    # print("Cookies data:-\n", request.COOKIES, "\n")
-    # print("META data:-\n", request.META, "\n")
-    if request.method =="POST":
-        print("E-MAIL:-", '\n' ,request.POST.get('l_email'))
-        print("PASSWORD:-", '\n' ,request.POST.get('l_password'))
+
+
+
+# def logindata(request):
+#     print("Login data")
+#     # print("Method used:-\n", request.method, "\n")
+#     print("Post data:-\n",request.POST, "\n")
+#     # print("Cookies data:-\n", request.COOKIES, "\n")
+#     # print("META data:-\n", request.META, "\n")
+#     if request.method =="POST":
+#         print("E-MAIL:-", '\n' ,request.POST.get('l_email'))
+#         print("PASSWORD:-", '\n' ,request.POST.get('l_password'))

@@ -38,8 +38,8 @@ def registerdata(request):
 
 
 
-# def logindata(request):
-#     print("Login data")
+def logindata(request):
+    print("Login data")
 #     # print("Method used:-\n", request.method, "\n")
 #     print("Post data:-\n",request.POST, "\n")
 #     # print("Cookies data:-\n", request.COOKIES, "\n")

@@ -32,3 +32,17 @@ def wishlist(request):
 def bag(request):
     return render(request, "bag.html")
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

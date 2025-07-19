@@ -5,7 +5,7 @@ from django.db import models
 class Aadhar(models.Model):
     a_no=models.IntegerField(unique=True)
     gen_date=models.DateField()
-
+    
 class Students(models.Model):
     name=models.CharField(max_length=50)
     email=models.EmailField()

@@ -1,0 +1,24 @@
+
+{% if x %}
+{% for i in x %}
+{{i.name}}
+{{i.email}}
+{{i.city}}
+{{i.a_no}}
+{{i.a_no.a_no}}
+{{i.a_no.gen_date}}
+<br />
+{% endfor %}
+
+{% elif y %}
+{% for i in y %}
+{{i.a_no}}
+{{i.gen_date}}
+{{i.stu_info.name}}
+{{i.stu_info.email}}
+{{i.stu_info.city}}
+<br />
+{% endfor %}
+
+{% endif %}
+

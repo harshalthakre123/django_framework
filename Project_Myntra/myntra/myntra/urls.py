@@ -18,6 +18,9 @@ from django.contrib import admin
 from django.urls import path
 from app import views
 
+from django.conf import settings
+from django.conf.urls.static import static
+
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", views.homepg, name="homepg"),
@@ -30,4 +33,7 @@ urlpatterns = [
     path("studio/",views.studio, name='studio'),
     path("wishlist/",views.wishlist, name='wishlist'),
     path("bag/",views.bag, name='bag'),
-]
+
+    
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+

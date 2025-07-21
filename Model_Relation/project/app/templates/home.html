@@ -1,3 +1,4 @@
+<!-- one to one -->
 
 {% if x %}
 {% for i in x %}
@@ -22,3 +23,27 @@
 
 {% endif %}
 
+
+
+<!-- one to many -->
+
+{% if a %}
+{% for i in a %}
+{{i.name}}
+{{i.email}}
+{{i.city}}
+{{i.depart}}
+{{i.depart.d_name}}
+<br />
+{% endfor %}
+
+{% elif b %}
+{% for i in b %}
+{{i.d_name}}
+{{i.student_info.name}}
+{{i.student_info.email}}
+{{i.student_info.contact}}
+<br />
+{% endfor %}
+
+{% endif %}

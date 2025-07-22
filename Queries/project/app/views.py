@@ -32,14 +32,14 @@ def myreverse(req):
 def myvalue(req):
     data= Students.objects.values()
     print(data)
-    # return HttpResponse(data)
-    return render(req, 'home.html', {'x': data})
+    return HttpResponse(data)
+    # return render(req, 'home.html', {'x': data})
 
 def myvaluelist(req):
     data= Students.objects.values_list()
     print(data)
-    # return HttpResponse(data)
-    return render(req, 'home.html', {'x': data})
+    return HttpResponse(data)
+    # return render(req, 'home.html', {'x': data})
 
 def myslice(req):
     print("first_five from top\n")

@@ -1,0 +1,29 @@
+MODEL RELATION
+|--One to One
+|- One to Many
+|- Many to Many
+
+table:- collection of rows and columns.
+
+rows:- Instance or Object
+column:- Key or Attribute
+
+1. Primary Key :- Any key, attribute or column which in unique for every object, row, instance or record for differentiation can be a primary key. every table have only one primary key.
+
+2. Candidate key: every possible column which have  the property of primary key is candidate key. the columns which fullfills the condition - (unique=True).
+
+3. Foreign Key:- two tables can be connect by using primary keys of both the table and these both primary key act as foreign key for another table.   
+or 
+two table can be connect by foreign key, foreign key is the primary key of both tables.
+
+##Two ways are there for accessing models.
+|--Forward Access
+|--Reverse Access
+
+example:-
+table-1:-Students(id, name, email, city, a_no(foreign key))
+table-2:- Aadhar(id, a_no(primary key), gen_date)
+
+
+Forward access is accessing the data of aadhar from Students and
+Reverse access is accessing the data of students from Aadhar by using related name of the field

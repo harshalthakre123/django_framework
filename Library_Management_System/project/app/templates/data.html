@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data</title>
+</head>
+<body>
+<h1>Books Data and Students Information</h1>
+
+<!-- Library Id:
+<br>
+<input type="text" name="lib_id"><input type="submit" value="submit">
+<br><br>
+Book_name/id: 
+<br>
+<input type="text" name="book_name"><input type="submit" value="submit">
+<br><br>
+Branch:
+<br>
+<input type="text" name="branch"><input type="submit" value="submit">
+<br><br> -->
+
+<!-- {% if student_data %} -->
+<!-- {% elif branch_data %}
+{% elif lib_id_data %}
+{% elif bookdata %}
+{% endif %} -->
+
+
+<table border="1">
+    <thead>
+        <th colspan="2">BRANCH LIST</th>
+    </thead>
+    <thead>
+        <th>Branch_ID</th>
+        <th>Branch_Name</th>
+    </thead>
+    <tbody>
+        {% if branch_data %}
+        {% for i in branch_data %}
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.branch_name}}</td>
+        </tr>    
+        {% endfor %}
+        {% endif %}
+    </tbody>
+</table>
+<br><br><br>
+
+
+<table border="1">
+    <thead>
+        <tr><th colspan="2">LIBRARY ID DATA</th></tr>
+    </thead>
+    <thead>        
+        <th>id</th>
+        <th>LIB_id</th>
+    </thead>
+    <tbody>
+        {% if lib_id_data %}
+        {% for i in lib_id_data %}
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.lib_id}}</td>
+        </tr>    
+        {% endfor %}
+        {% endif %}
+    </tbody>
+</table>
+<br><br><br>
+
+
+<table border="1">
+    <thead>
+        <tr><th colspan="6">STUDENT DATA AND ACCESSING BRANCH AND LIBRARY ID</th></tr>
+    </thead>
+    <thead>        
+        <th>Student_ID</th>
+        <th>Student_Name</th>
+        <th>E-mail</th>
+        <th>Contact</th>
+        <th>Branch</th>
+        <th>Library_ID</th>
+    </thead>
+    <tbody>
+        {% if students %}
+        {% for i in students %}
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.email}}</td>
+            <td>{{i.contact}}</td>
+            <td>{{i.branch.branch_name}}</td>
+            <td>{{i.lib_id.lib_id}}</td>
+        </tr>    
+        {% endfor %}
+        {% endif %}
+    </tbody>
+</table>
+<br><br><br>
+
+
+</body>
+</html>

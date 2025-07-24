@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+{{note}}
+<br>
+
+    <a href="{% url 'branch' %}">Branch</a>
+    <br>
+    <a href="{% url 'library' %}">Create New Library Id</a>
+    <br> 
+    <a href="{% url 'student' %}">Assign library id to Students</a>
+    <br>
+    <a href="{% url 'book' %}">Add New Book</a>
+    <br>
+    <a href="{% url 'issue' %}">Issue a Book</a>
+    <br>
+    <a href="{% url 'data' %}">Data</a>
+
+
+
+
+{% if branch %}
+    <form action="{% url 'addbranch' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <h1>Add Branch</h1>
+        Branch:
+        <br>
+        <input type="text" name="addbranch" placeholder="Enter new branch">
+        <br><br>
+        <input type="submit" value="submit">
+    </form>    
+
+
+
+
+{% elif library %}
+    <form action="{% url 'addlibid' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <h1>Create New Library ID</h1>
+        Library ID:
+        <br>
+        <input type="text" name="addlib_id" placeholder="Enter library id">
+        <br><br>
+        <input type="submit" value="submit">
+    </form>
+
+
+
+
+{% elif student %}
+    <form action="{% url 'studata' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <h1>Assign Library id to Students</h1>
+
+        Student Name:
+        <br>
+        <input type="textnameid="name="name" placeholder="Enter student name">
+        <br>
+        Email:
+        <br>
+        <input type="email" name="email" placeholder="abc@gmail.com">
+        <br>
+        Contact:
+        <br>
+        <input type="integer" name="contact" placeholder="Enter 10 digit Mob No.">
+        <br>
+        Branch:
+        <br>
+        <select name="branch">
+            {% if branch_data %}
+                {% for i in branch_data %}
+                {<option value="{{i.branch_name}}">{{i.branch_name}}</option>}
+                {% endfor %}
+            {% endif %}
+        </select>
+        <br>
+        <label for="lib_id">Assign Library Id:</label>
+        <br>
+        <input list="libid_data" name="lib_id" id="lib_id" >
+        <datalist id="libid_data">
+            {% if lid_data %}
+            {% for i in lid_data %}
+            {<option value="{{i.lib_id}}">{{i.lib_id}}</option>}
+            {% endfor %}
+            {% endif %}
+        </datalist>
+        <br><br>
+        <input type="submit" value="submit">
+
+    </form>
+
+
+
+
+{% elif book %}
+
+    <form action="{% url 'addbook' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <h1>Add New Books</h1>
+        Book Name:
+        <br>
+        <input type="text" name="book" placeholder="Enter book name">
+        <br>
+        Author Name:
+        <br>
+        <input type="text" name="author" placeholder="Enter author name">
+        <br><br>
+        <input type="submit" value="submit">
+    </form>
+
+{% elif issue %}
+
+    <form action="{% url 'bookissued' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <h1>Issue a Book</h1>
+        <label for="library_id">Library ID:</label><br>
+        <input list="libid_data" name="library_id" id="library_id">
+        <datalist id="libid_data">
+            {% if libid_data %}
+                {% for i in libid_data %}
+                {<option value="{{i.lib_id}}">{{i.lib_id}}</option>}                    
+                {% endfor %}
+            {% endif %}
+        </datalist>
+        
+        <br>
+
+        <label for="issuedb_name">Select Book:</label><br>
+        <input list="book_data" name="issuedb_name" id="issuedb_name">
+        <datalist id="book_data">
+            {% if books_data %}
+                {% for i in books_data %}
+                {<option value="{{i.book_name}}">{{i.book_name}}</option>}
+                {% endfor %}
+            {% endif %}
+        </datalist>
+        <br><br>
+        <input type="submit" value="submit">
+
+    </form>
+
+{% endif%}
+
+</body>
+</html>

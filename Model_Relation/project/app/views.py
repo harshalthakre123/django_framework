@@ -4,6 +4,8 @@ from app.models import Aadhar as aa
 from django.shortcuts import HttpResponse
 from app.models import Department as dp
 from app.models import Students1 as stu
+from app.models import Fuel as f
+from app.models import Vehicle as v
 
 # Create your views here.
 
@@ -37,6 +39,11 @@ def ForwardAccess(req):
 
     data1=stu.objects.all()
     return render (req, 'home.html', {"a": data1})
+
+
+
+    #many to many==============================================
+    
     
 
 
@@ -68,7 +75,7 @@ def ReverseAccess(req):
         print(i.name)
 
 
-    return HttpResponse({depart: depart, name: name, email: email , contact: contact})
+    # return HttpResponse({depart: depart, name: name, email: email , contact: contact})
 
 
     # data1=dp.objects.all()

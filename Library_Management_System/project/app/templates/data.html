@@ -6,27 +6,9 @@
     <title>Data</title>
 </head>
 <body>
+
+
 <h1>Books Data and Students Information</h1>
-
-<!-- Library Id:
-<br>
-<input type="text" name="lib_id"><input type="submit" value="submit">
-<br><br>
-Book_name/id: 
-<br>
-<input type="text" name="book_name"><input type="submit" value="submit">
-<br><br>
-Branch:
-<br>
-<input type="text" name="branch"><input type="submit" value="submit">
-<br><br> -->
-
-<!-- {% if student_data %} -->
-<!-- {% elif branch_data %}
-{% elif lib_id_data %}
-{% elif bookdata %}
-{% endif %} -->
-
 
 <table border="1">
     <thead>
@@ -48,6 +30,31 @@ Branch:
     </tbody>
 </table>
 <br><br><br>
+
+<table border="1">
+    <thead><th colspan="5">Reverse Access data (from branch we get the student data)</th></thead>
+    <thead>
+        <th>Branch_ID</th>
+        <th>Branch</th>
+        <th>Student_info</th>
+    </thead>
+    <tbody>
+        {% if branch_data %}
+        {% for i in branch_data %}
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.branch_name}}</td>
+            {% for j in x %}
+            <td>{{j.name}}</td>
+            <td>{{j.email}}</td>
+            <td>{{j.contact}}</td>
+            <td></td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+        {% endif %}
+    </tbody>
+</table>
 
 
 <table border="1">

@@ -104,6 +104,11 @@ def data(req):
 
     students=st.objects.all()
     branch_data=Branch.objects.all()
+    for i in branch_data:
+        x=i.stu_branch.all()
+        # for j in x:
+        #     print(j.name)
+
     lib_id_data=LibId.objects.all()
     # return HttpResponse(students)
-    return render(req, "data.html", {"students": students, "branch_data": branch_data, "lib_id_data": lib_id_data})
+    return render(req, "data.html", {"students": students, "branch_data": branch_data,"branch_obj": x ,"lib_id_data": lib_id_data})

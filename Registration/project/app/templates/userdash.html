@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    {% if stu_data %}
+    {{stu_data.name}}
+    {{stu_data.email}}
+    {{stu_data.contact}}
+    <a href="{{stu_data.image}}" download="Download Image">
+        <img src="{{stu_data.image}}" alt="img">
+    </a>
+    <a href="{{stu_data.document}}" download>{{stu_data.document}}</a>
+    {% endif %}
+</body>
+</html>

@@ -38,6 +38,9 @@ sup{
     color: rgb(255, 0, 140);
 }
 
+
+
+
 /* search */
 
 .d-flex{
@@ -67,12 +70,7 @@ sup{
     font-weight: 400;
 }
 
-
-/* Right Icons and navlinks*/
-
-/* .navbar-text{
-    margin-right: .7vw;
-} */
+/* icons============= */
 
 .nav-link{
     text-align: center;
@@ -97,3 +95,5 @@ sup{
     height: 17vh;
     width: 100%;
 }
+
+

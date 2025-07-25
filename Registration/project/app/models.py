@@ -8,6 +8,7 @@ class Students(models.Model):
     contact=models.IntegerField()
     image=models.ImageField(upload_to="img/")
     document=models.FileField(upload_to="file/")
+    password=models.CharField(max_length=25)
     def __str__(self):
         return self.first_name+' '+self.email+' '+str(self.contact)
 

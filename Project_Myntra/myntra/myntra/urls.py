@@ -34,6 +34,8 @@ urlpatterns = [
     path("wishlist/",views.wishlist, name='wishlist'),
     path("bag/",views.bag, name='bag'),
 
+    path("signup", views.signup, name="signup"),
+    path("login", views.login, name="login"),
     
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

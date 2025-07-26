@@ -13,6 +13,7 @@
     background-color: white;
     height: 13.4vh;
     width: 100%;
+    
 }
 
 #nav-logo{
@@ -20,15 +21,20 @@
 }
 
 #navlinks{
-    padding-left: 6.25px;
+    /* padding-left: 6.25px; */
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 12.25px;
     font-weight: 700;
     margin-right: 2vw;
 }
+.nav-item{
+    padding-top: 3.8vh;
+    height:13.5vh;
+}
 
 #navlink-heading{
-    margin-right: 1.5vw;
+    margin-right: 1vw;
+    margin-left: .5vw;
     color: rgb(70, 70, 70);
     text-shadow: 0.25px 0.25px rgba(119, 114, 114, 0.705);
     
@@ -43,9 +49,11 @@ sup{
 
 /* search */
 
-.d-flex{
+
+.d-flex{  
+    height: 6.6vh;
     width: 26.9vw;
-    margin-left: 6.5vw;
+    margin-left: 7vw;
     margin-right: 0px;
     padding-left: 3px;
     border: 0;
@@ -55,7 +63,7 @@ sup{
 
 .search-btn{
     background-color: white;
-    height: 6.6vh;
+    height: 6.4vh;
     padding-left: 1vw;
     border: 0px;
     background-color: whitesmoke;
@@ -72,6 +80,11 @@ sup{
 
 /* icons============= */
 
+#icons{
+    height: 13.4vh;
+    margin-top: -2.5vh;
+}
+
 .nav-link{
     text-align: center;
 }
@@ -81,7 +94,7 @@ sup{
 }
 
 #icon-head{
-    font-size: 11.5px;
+    font-size: 11px;
     font-weight: 700;
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin-right: .7vw;
@@ -95,5 +108,112 @@ sup{
     height: 17vh;
     width: 100%;
 }
+/* hover effect================================= */
+
+.navdropdown{
+    display: none;
+    position: fixed;
+    z-index: 101;
+    margin-left: -8.9vw;
+    margin-top: 4vh;
+    height: 100%;
+    width: 100%;
+    padding: 2vh 3vw 4vh 3vw;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.dditems{
+    z-index: 102;
+    margin-top: -2vh;
+    margin-left: 5vw;
+    height: 73vh;
+    width: 90%;
+    padding: 2vh;
+    background-color: white;
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.13);
+}
+
+#link_men:hover{
+    border-bottom: 4px solid rgb(243, 54, 101);
+}
+#link_men:hover .navdropdown{
+    display: block;
+}
+
+#link_women:hover {
+    border-bottom: 4px solid rgb(255, 73, 179);
+}
+#link_women:hover .navdropdown{
+    display: block;
+    margin-left: -13.62vw;
+}
+
+#link_kids:hover{
+    border-bottom: 4px solid rgb(240, 96, 13);
+}
+#link_kids:hover .navdropdown{
+    display: block;
+    margin-left: -19.9vw;
+}
+
+#link_home:hover{
+    border-bottom: 4px solid rgb(253, 199, 22);
+}
+#link_home:hover .navdropdown{
+    display: block;
+    margin-left: -24.62vw;
+}
+
+#link_beauty:hover{
+    border-bottom: 4px solid rgb(0, 162, 216);
+}
+#link_beauty:hover .navdropdown{
+    display: block;
+    margin-left: -30vw;
+}
+
+#link_genz:hover{
+    border-bottom: 4px solid rgb(0, 162, 216);
+}
+#link_genz:hover .navdropdown{
+    display: block;
+    margin-left: -36.1vw;
+}
 
 
+.ddstudio{
+    margin-top: -2vh;
+    margin-left: 23.5vw;
+    height: 74.5vh;
+    width: 43%;
+    padding: 2vh;
+    background-color: white;
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.13);
+}
+#link_studio:hover{
+    border-bottom: 4px solid rgb(253, 21, 137);
+}
+#link_studio:hover .navdropdown{
+    display: block;
+    margin-left: -41.12vw;
+}
+
+
+.userdd{
+    display: none;
+    position: fixed;
+    z-index: 90;
+    margin-left: -9.5vw;
+    margin-top: 1.5vh;
+    height: 73vh;
+    width: 21vw;
+    padding: 2vh 1.5vw 3vh 1.5vw;
+    background-color: white;
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.13);
+}
+#link_user:hover{
+    height: 14.6vh;
+    border-bottom: 4px solid rgb(243, 54, 101);
+}
+#link_user:hover .userdd{
+    display: block;
+}

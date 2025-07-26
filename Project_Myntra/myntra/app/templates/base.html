@@ -33,11 +33,17 @@
 
 </head>
 
+<style>
+
+
+</style>
+
 <body>
 
     <!-- NAVBAR============================================================= -->
 
     
+
 <nav class="navbar navbar-expand-lg bg-body-tertiary" id="navbar">
   <div class="container-fluid" id="main-container">
     <div>
@@ -52,29 +58,341 @@
 
     <div class="collapse navbar-collapse" id="navlink_container">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="navlinks">
-        <li class="nav-item">
+        <li class="nav-item" id="link_men">
           <a class="nav-link" id="navlink-heading" href="{% url 'men' %}">MEN</a>
+            <div class="navdropdown">
+              <div class="dditems">
+                <div class="container text-center">
+                    <div class="row align-items-start">
+                      <div class="col">
+                        <h6><a href="#">Topwear</a></h6>
+                        <ul>
+                          <li><a href="#">T-Shirts</a></li>
+                          <li><a href="#">Casual Shirts</a></li>
+                          <li><a href="#">Formal Shirts</a></li>
+                          <li><a href="#">Sweatshirts</a></li>
+                          <li><a href="#">Sweaters</a></li>
+                          <li><a href="#">Jackets</a></li>
+                          <li><a href="#">Blazers and Coats</a></li>
+                          <li><a href="#">Suits</a></li>
+                          <li><a href="#">Rain Jackets</a></li>
+                        </ul>
+                        <hr>
+
+                        <h6><a href="#">Indian & Festive Wear</a></h6>
+                        <ul>
+                          <li><a href="#">Kurtas & Kurta Sets</a></li>
+                          <li><a href="#">Sherwanis</a></li>
+                          <li><a href="#">Nehru Jackets</a></li>
+                          <li><a href="#">Dhotis</a></li>
+                        </ul>
+                      </div>
+                      <div class="col" id="column">
+                        <h6><a href="#">Bottom Wear</a></h6>
+                        <ul>
+                          <li><a href="#">Jeans</a></li>
+                          <li><a href="#">Casual Trousers</a></li>
+                          <li><a href="#">Formal Trousers</a></li>
+                          <li><a href="#">Shorts</a></li>
+                          <li><a href="#">Track Pants & Joggers</a></li>
+                        </ul>
+                        <hr>
+
+                        <h6><a href="#">Innerwear & Sleepwear</a></h6>
+                        <ul>
+                          <li><a href="#">Brief & Trunks</a></li>
+                          <li><a href="#">Boxers</a></li>
+                          <li><a href="#">Vests</a></li>
+                          <li><a href="#">Sleepwear & Loungewear</a></li>
+                          <li><a href="#">Thermals</a></li>
+                        </ul>
+                        <hr>
+                        <h6><a href="#">Plus Size</a></h6>
+                      </div>
+                      <div class="col">
+                        <h6><a href="#">Footwear</a></h6>
+                        <ul>
+                          <li><a href="#">Casual Shoes</a></li>
+                          <li><a href="#">Sports Shoes</a></li>
+                          <li><a href="#">Formal Shoes</a></li>
+                          <li><a href="#">Sneakers</a></li>
+                          <li><a href="#">Sandals & Floaters</a></li>
+                          <li><a href="#">Flip Flops</a></li>
+                          <li><a href="#">Socks</a></li>
+                        </ul>
+                        <hr>
+                        <h6><a href="#">Personal Care & Grooming</a></h6>
+                        <h6><a href="#">Sunglasses</a></h6>
+                        <h6><a href="#">Watches</a></h6>
+                      </div>
+                      <div class="col" id="column">
+                       <h6><a href="#">Sports & Active Wear</a></h6>
+                       <ul>
+                        <li><a href="#">Sports Shoes</a></li>
+                        <li><a href="">Sports Sandals</a></li>
+                        <li><a href="">Active T-Shirts</a></li>
+                        <li><a href="">Track Pants & Shorts</a></li>
+                        <li><a href="">Tracksuits</a></li>
+                        <li><a href="">Jackets & Sweatshirts</a></li>
+                        <li><a href="">Sports Accessories</a></li>
+                        <li><a href="">Swimwear</a></li>
+                       </ul>
+                       <h6><a href="#">Gadgets</a></h6> 
+                       <ul>
+                        <li><a href="#">Smart Wearables</a></li>
+                        <li><a href="#">Fitness Gadgets</a></li>
+                        <li><a href="#">Headphones</a></li>
+                        <li><a href="#">Speakers</a></li>
+                      </ul>
+                      </div>
+                      <div class="col">
+                       <h6><a href="#">Fashion Accessories</a></h6>
+                       <ul>
+                        <li><a href="#">Wallets</a></li>
+                        <li><a href="#">Belts</a></li>
+                        <li><a href="#">Perfumes & Body Mists</a></li>
+                        <li><a href="#">Trimmers</a></li>
+                        <li><a href="#">Deodrants</a></li>
+                        <li><a href="#">Ties, Cufflinks & Pocket Squares</a></li>
+                        <li><a href="#">Muffelers, Scarves & Gloves</a></li>
+                        <li><a href="#">Phone Cases</a></li>
+                        <li><a href="#">Rings and Wristwear</a></li>
+                        <li><a href="#">Helmets</a></li>
+                       </ul>
+                       <hr>
+                       <h6><a href="#">Bags and Bagpacks</a></h6>
+                       <h6><a href="#">Luggages & Trolleys</a></h6> 
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" id="link_women">
           <a class="nav-link" id="navlink-heading" href="{% url 'women' %}">WOMEN</a>
+          <div class="navdropdown">
+              <div class="dditems">
+                <div class="container text-center">
+                  <div class="row align-items-start">
+                    <div class="col">
+                      <h6><a href="#">Indian & Fusion Wear</a></h6>
+                      <ul>
+                        <li><a href="#">Kurtas & Suits</a></li>
+                        <li><a href="#">Kurtis, Tunics & Tops</a></li>
+                        <li><a href="#">Sarees</a></li>
+                        <li><a href="#">Ethnic Wear</a></li>
+                        <li><a href="#">Leggings, Salwars & Churidars</a></li>
+                        <li><a href="#">Skirts & Palazzos</a></li>
+                        <li><a href="#">Dress Materials</a></li>
+                        <li><a href="#">Lehenga Cholis</a></li>
+                        <li><a href="#">Dupattas & Shawls</a></li>
+                        <li><a href="#">Jackets</a></li>
+                      </ul>
+                      <hr>
+                      <h6><a href="#">Belts, Scarves & More</a></h6>
+                      <h6><a href="#">Watches & Wearables</a></h6>
+                    </div>
+                    <div class="col" id="column">
+                      <h6><a href="#">Western Wear</a></h6>
+                      <ul>
+                        <li><a href="#">Dresses</a></li>
+                        <li><a href="#">Tops</a></li>
+                        <li><a href="#">Tshirts</a></li>
+                        <li><a href="#">Jeans</a></li>
+                        <li><a href="#">Trowsers & Capris</a></li>
+                        <li><a href="#">Shorts & Skirts</a></li>
+                        <li><a href="#">Co-ords</a></li>
+                        <li><a href="#">Playsuits</a></li>
+                        <li><a href="#">Jumpsuits</a></li>
+                        <li><a href="#">Shrugs</a></li>
+                        <li><a href="#">Sweaters &Sweatshirts</a></li>
+                        <li><a href="#">Jackets & Coats</a></li>
+                        <li><a href="#">Blazzers & Waistcoats</a></li>
+                      </ul>
+                      <hr>
+                      <h6><a href="#">Plus Size</a></h6>
+                    </div>
+                    <div class="col">
+                      <h6><a href="#">Maternity</a></h6>
+                      <h6><a href="#">Sunglasses & Frames</a></h6>
+                      <h6><a href="#">Footwear</a></h6>
+                      <ul>
+                        <li><a href="#">Flats</a></li>
+                        <li><a href="#">Casual Shoes</a></li>
+                        <li><a href="#">Heels</a></li>
+                        <li><a href="#">Boots</a></li>
+                        <li><a href="#">Sports Shoes & Floaters</a></li>
+                      </ul>
+                      <hr>
+                      <h6><a href="#">Sports & Active Wear</a></h6>
+                      <ul>
+                        <li><a href="#">Clothing</a></li>
+                        <li><a href="#">Footwear</a></li>
+                        <li><a href="#">Sport Accessories</a></li>
+                        <li><a href="#">Sports Equipment</a></li>
+                      </ul>
+                      
+                    </div>
+                    <div class="col" id="column">
+                      <h6><a href="#">Lingerie & Sleepwear</a></h6>
+                      <ul>
+                        <li><a href="#">Bra</a></li>
+                        <li><a href="#">Briefs</a></li>
+                        <li><a href="#">Shapewear</a></li>
+                        <li><a href="#">Sleepwear & Loungewear</a></li>
+                        <li><a href="#">Swimwear</a></li>
+                        <li><a href="#">Camisoles & Thermals</a></li>
+                      </ul>
+                      <hr>
+                      <h6><a href="#">Beauty & Personal Care</a></h6>
+                      <ul>
+                        <li><a href="#">Makeup</a></li>
+                        <li><a href="#">Skincare</a></li>
+                        <li><a href="#">Premium Beauty</a></li>
+                        <li><a href="#">Lipsticks</a></li>
+                        <li><a href="#">Fragrances</a></li>
+                      </ul>
+                      
+                    </div>
+                    <div class="col">
+                      <h6><a href="#">Gadgets</a></h6>
+                      <ul>
+                        <li><a href="#">Smart Wearables</a></li>
+                        <li><a href="#">Fitness Gadgets</a></li>
+                        <li><a href="#">Headphones</a></li>
+                        <li><a href="#">Speakers</a></li>
+                      </ul>
+                      <hr>
+                      <h6><a href="#">Jewellery</a></h6>
+                      <ul>
+                        <li><a href="#">Fashion Jewellery</a></li>
+                        <li><a href="#">Fine Jewellery</a></li>
+                        <li><a href="#">Earrings</a></li>
+                      </ul>
+                      <hr>
+                      <h6><a href="#">Backpacks</a></h6>
+                      <h6><a href="#">Handbags, Bags & Wallets</a></h6>
+                      <h6><a href="#">Luggages & Trolleys</a></h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" id="link_kids">
           <a class="nav-link" id="navlink-heading" href="{% url 'kids' %}">KIDS</a>
+          <div class="navdropdown">
+              <div class="dditems">
+                <div class="container text-center">
+                  <div class="row align-items-start">
+                    <div class="col">
+                      One of three columns
+                    </div>
+                    <div class="col" id="column">
+                      One of three columns
+                    </div>
+                    <div class="col">
+                      One of three columns
+                    </div>
+                    <div class="col" id="column">
+                      One of three columns
+                    </div>
+                    <div class="col">
+                      One of three columns
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" id="link_home">
           <a class="nav-link" id="navlink-heading" href="{% url 'home' %}">HOME</a>
+          <div class="navdropdown">
+              <div class="dditems">
+                <div class="container text-center">
+                  <div class="row align-items-start">
+                    <div class="col">
+                      One of three columns
+                    </div>
+                    <div class="col" id="column">
+                      One of three columns
+                    </div>
+                    <div class="col">
+                      One of three columns
+                    </div>
+                    <div class="col" id="column">
+                      One of three columns
+                    </div>
+                    <div class="col">
+                      One of three columns
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" id="link_beauty">
           <a class="nav-link" id="navlink-heading" href="{% url 'beauty' %}">BEAUTY</a>
+          <div class="navdropdown">
+              <div class="dditems">
+                <div class="container text-center">
+                  <div class="row align-items-start">
+                    <div class="col">
+                      One of three columns
+                    </div>
+                    <div class="col" id="column">
+                      One of three columns
+                    </div>
+                    <div class="col">
+                      One of three columns
+                    </div>
+                    <div class="col" id="column">
+                      One of three columns
+                    </div>
+                    <div class="col">
+                      One of three columns
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" id="link_genz">
           <a class="nav-link" id="navlink-heading" href="{% url 'genz' %}">GENZ</a>
+          <div class="navdropdown">
+              <div class="dditems">
+                <div class="container text-center">
+                  <div class="row align-items-start">
+                    <div class="col">
+                      One of three columns
+                    </div>
+                    <div class="col" id="column">
+                      One of three columns
+                    </div>
+                    <div class="col">
+                      One of three columns
+                    </div>
+                    <div class="col" id="column">
+                      One of three columns
+                    </div>
+                    <div class="col">
+                      One of three columns
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" id="link_studio">
           <a class="nav-link" id="navlink-heading" href="{% url 'studio' %}">STUDIO<sup>NEW</sup></a>
+          <div class="navdropdown">
+              <div class="ddstudio">
+
+              </div>
+            </div>
         </li>
       </ul>
-      <div class="container-fluid">
+      <div class="container-fluid" id="search-container">
           <form class="d-flex" role="search">
               <button class="search-btn" type="submit"><i class="fa-solid fa-magnifying-glass fa-sm" style="color: rgb(121, 121, 121);"></i></button>
               <input class="form-control me-2" id="search" type="search" placeholder="Search for products, brands and more" aria-label="Search"/>
@@ -82,9 +400,12 @@
       </div>
 
       <span class="navbar-text">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="">
-            <li class="nav-item">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="icons">
+            <li class="nav-item" id="link_user">
                 <a class="nav-link" href="#"><i id="nav_icon" class="bi bi-person" id="person_icon"></i><div id="icon-head">Profile</div></a>
+                <div class="userdd">
+                  <h6>Welcome</h6>
+                </div>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'wishlist' %}"><i id="nav_icon" class="bi bi-heart"></i><div id="icon-head">Wishlist</div></a>
@@ -97,6 +418,7 @@
     </div>  
   </div>
 </nav>
+
 
 <div class="b_space"></div>
 

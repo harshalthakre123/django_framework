@@ -41,7 +41,7 @@
 }
 sup{
     margin-left: 5px;
-    color: rgb(255, 0, 140);
+    color: #ff3f6c;
 }
 
 
@@ -127,9 +127,53 @@ sup{
     margin-left: 5vw;
     height: 73vh;
     width: 90%;
-    padding: 2vh;
+    padding: 2vh 2vh 2vh 0vh;
     background-color: white;
     box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.13);
+}
+/* DROPDOWN COLUMN CSS */
+
+#evencol{
+    margin-top: -2vh;
+    height: 73vh;
+    background-color: rgb(250, 250, 250);
+}
+
+.col ul{
+    list-style: none;
+    margin-left: -1.2vw;
+}
+
+.col ul a{
+    font-size: 13px;
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+    line-height: 3.73vh;
+}
+.col ul a:hover{
+    font-weight: 600;
+}
+
+#ddmen{
+    font-weight: 700;
+    color: rgb(241, 73, 115);
+}
+#ddwomen{
+    font-weight: 700;
+    color: rgb(255, 73, 179);
+}
+#ddkids{
+    font-weight: 700;
+    color: rgb(240, 96, 13) ;
+}
+#ddhome{
+    font-weight: 700;
+    color: rgb(253, 199, 22);
+}
+#ddbeauty_genz{
+    font-weight: 700;
+    color: rgb(0, 162, 216);
 }
 
 #link_men:hover{
@@ -189,6 +233,18 @@ sup{
     background-color: white;
     box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.13);
 }
+#studiobtn{
+    text-decoration: none;
+    padding: 3vh;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 15vw;
+    margin-top: 5vh;
+    color: black;
+    border: 1px solid rgb(216, 216, 216);
+}
+
 #link_studio:hover{
     border-bottom: 4px solid rgb(253, 21, 137);
 }
@@ -197,6 +253,7 @@ sup{
     margin-left: -41.12vw;
 }
 
+/*USER DROPDOWN ============================================================================ */
 
 .userdd{
     display: none;
@@ -206,14 +263,68 @@ sup{
     margin-top: 1.5vh;
     height: 73vh;
     width: 21vw;
-    padding: 2vh 1.5vw 3vh 1.5vw;
+    padding: 4.8vh 1.5vw 3vh 1.5vw;
     background-color: white;
     box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.13);
+    font-size: 14px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 4vh;
 }
+
+
 #link_user:hover{
     height: 14.6vh;
     border-bottom: 4px solid rgb(243, 54, 101);
 }
+
 #link_user:hover .userdd{
     display: block;
+}
+
+#welcome{
+    line-height: 0px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 1.3vh;
+}
+
+.buttons{
+    margin-top: -4px;
+    height: 5.7vh;
+    width: 10.4vw;
+    border: 1px solid rgb(212, 212, 212);
+    color: #ff3f6c;
+    font-weight: 700;
+}
+.buttons .btn{
+    text-decoration: none;
+    color: #ff3f6c;
+    font-weight: 700;
+    font-size: 12px;
+}
+.buttons:hover{
+    border: 1px solid #ff3f6c;
+}
+
+.userdd ul{
+    list-style: none;
+    margin-left: -2vw;
+}
+.userdd a{
+    text-decoration: none;
+}
+
+.userdd a:hover{
+    font-weight: 600;
+}
+
+#spannew{
+    margin-left: 4px;
+    padding: 1px 3px 1px 3px;
+    font-size: 10px;
+    font-style: italic;
+    border: 1px solid #ff3f6c;
+    border-radius: 5px;
+    background-color: #ff2356;
+    color: white;
 }

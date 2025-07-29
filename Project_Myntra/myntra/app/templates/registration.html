@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Signup{% endblock %}</title>
+    {% block css %}
+    <link rel="stylesheet" href="{% static 'css/registration.css' %}">
+    {% endblock %}
+
+</head>
+<style>
+
+
+</style>
+<body>
+    
+{% block content %}
+<div class="bg" align="center">
+    
+    <div class="innerbg">
+        <img src="{% static 'images/registration-banner.webp' %}" alt="banner" width="100%">
+        {% if signup_form %}
+        <form action="{% url 'signup'%}" class="form" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <h4 class="heading">Signup</h4>
+            <input type="text" id="name" name="fname" placeholder="First name">
+            <input type="text" id="name" name="lname" placeholder="Last name"><br>
+            <input type="email" id="email" name="email" placeholder="abc123@gmail.com"><br>
+            <input type="number" id="contact" name="contact" placeholder="+91 '10- digit mob no.'"><br>
+            <input type="password" id="password" name="password" placeholder="Password"><br>
+            <input type="password" id="password" name="cpassword" placeholder="Confirm Password"><br>
+            <input type="submit" id="btn" value="Signup">
+            <br>
+            <p>
+                Have trouble signing up? <a href="#">Get help</a>.
+                <br>
+                Please <a href="{% url 'login' %}">Login</a> if you already have an account?
+            </p>
+            
+        </form>
+
+        {% elif login_form %}
+        <form action="{% url 'login' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <h4 class="heading">Login</h4>
+            <input type="email" id="email" name="email" placeholder="abc123@gmail.com"><br>
+            <input type="password"id="pass" name="password" placeholder="password"><br><br>
+            <input type="submit" id="loginbtn" value="Log-in">
+            <br>
+            <p>
+                Have trouble loging in? <a href="#">Get help</a>.
+                <br>
+                New user? <a href="{% url 'signup' %}">Signup</a>.
+            </p>
+        </form>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
+
+</body>
+</html>

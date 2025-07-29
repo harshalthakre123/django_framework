@@ -709,9 +709,14 @@
             <li class="nav-item" id="link_user">
                 <a class="nav-link" href="#"><i id="nav_icon" class="bi bi-person" id="person_icon"></i><div id="icon-head">Profile</div></a>
                 <div class="userdd">
+                  {% if user_data %}
+                  <p id="welcome">Hello {{user_data.f_name}}</p>
+                  <p id="welcome1">{{user_data.contact}}</p>
+                  {% else %}
                   <p id="welcome">Welcome</p>
                   <p>To access account and manage orders</p>
-                  <div class="buttons"><a href="" class="btn">LOGIN</a>/<a href="" class="btn">SIGNUP</a></div>
+                  <div class="buttons"><a href="{% url 'login' %}" class="btn">LOGIN</a>/<a href="{% url 'signup' %}" class="btn">SIGNUP</a></div>
+                  {% endif %}
                   <hr>
                   <ul>
                     <li><a href="#">Orders</a></li>
@@ -725,6 +730,11 @@
                     <li><a href="#">Saved Cards</a></li>
                     <li><a href="#">Saved VPA</a></li>
                     <li><a href="#">Saved Addresses</a></li>
+                    {% if user_data %}
+                    <hr>
+                    <li><a href="#">Edit Profile</a></li>
+                    <li><a href="{% url 'logout' %}">Logout</a></li>
+                    {% endif %}
                   </ul>
                 </div>
             </li>

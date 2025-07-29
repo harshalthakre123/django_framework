@@ -1,3 +1,5 @@
+{% extends "base.html" %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,12 +9,9 @@
 </head>
 <body>
     
-    <form action="{% url 'login' %}" method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        <h1>Login Page</h1>
-        Email: <input type="email" name="email" placeholder="abc123@gmail.com"><br>
-        Password: <input type="password" name="password" placeholder="password"><br><br>
-        <input type="submit" value="Log-in">
-    </form>
+    {% block content %}
+    
+    {% endblock %}
+    
 </body>
 </html>

@@ -47,16 +47,16 @@ def signup(req):
         data=Users.objects.filter(email=e)
         if data:
             msg="User Already Exist! Please Login."
-            return render(req, "signup.html", {"msg": msg})
+            return render(req, "registration.html", {"msg": msg})
         elif p==cp:
-            # Users.objects.create(fname=fn, l_name=ln, email=e, contact=c, password=p)
+            Users.objects.create(f_name=fn, l_name=ln, email=e, contact=c, password=p)
             msg="Registration Successful, Please Login to Continue."
-            return render(req, "login.html", {"msg":msg})
+            return render(req, "registration.html", {"login_form":"login_form","msg":msg})
         else:
             msg="Password and Confirm Password Not Matched! Please Try Again"
-            return render(req, "signup.html", {"msg": msg})
+            return render(req, "registration.html", {"signup_form": "signup_form", "msg": msg})
 
-    return render(req, "signup.html")
+    return render(req, "registration.html",{"signup_form": "signup_form",})
 
 def login(req):
     if req.method=="POST":
@@ -67,16 +67,19 @@ def login(req):
             user_obj=Users.objects.get(email=e)
             password=user_obj.password
             if p==password:
-                user_data={"name":user_obj.name,"email":user_obj.email,"contact":user_obj.contact}
+                user_data={"f_name": user_obj.f_name, "l_name": user_obj.l_name ,"email": user_obj.email,"contact": user_obj.contact}
                 msg="Login Successful!"
-                return render(req, "homepg.html", {"msg":msg})
+                return render(req, "homepg.html", {"msg":msg, "user_data":user_data})
             else:
                 msg="Email and password not matched!"
-                return render(req, "login.html", {"email":e} )
-    return render(req, "login.html")
+                return render(req, "registration.html", {"signup_form": "signup_form","email":e} )
+    return render(req, "registration.html", {"login_form": "login_form"})
 
 
-
+def logout(req):
+    pass
+    # login.user_data={}
+    # return render(req, "home.html",{"user_data ":user_data})
 
 
 

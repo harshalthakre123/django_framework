@@ -1,0 +1,77 @@
+.bg{
+    height: 100vh;
+    width: 100%;
+    margin-top: -5vh;
+    padding: 2vh;
+    background-color: rgb(255, 238, 241);
+}
+
+.innerbg{
+    height: auto;
+    width: 26vw;
+    background-color: white;
+    padding: 3vh;
+}
+
+.heading{
+    margin-top: 2vh;
+    margin-bottom: 3vh;
+
+}
+input{
+    padding-left: .5vw;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#name{
+    width: 10.5vw;
+    margin: .5vw;
+    margin-bottom: 2vh;
+}
+
+#email{
+    width: 22.4vw;
+    margin-bottom: 2vh;
+}
+
+#contact{
+    width: 22.4vw;
+    margin-bottom: 2vh;
+}
+
+#password{
+    width: 22.4vw;
+    margin-bottom: 2vh;
+}
+#btn{
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    width: 22.4vw;
+    height: 5vh;
+    font-weight: 700;
+    border: 1px solid #ff3f6c;
+    background-color: white;
+    color: #ff3f6c;
+    border-radius: 5px;
+}
+
+#btn:hover{
+    background-color: #ff3f6c;
+    color: white;
+}
+
+#pass{
+    width: 22.4vw;
+}
+#loginbtn{
+    margin-top: -5vh;
+    margin-bottom: 1vh;
+    width: 22.4vw;
+    height: 5vh;
+    font-weight: 700;
+    border: 1px solid #ff3f6c;
+    background-color: white;
+    color: #ff3f6c;
+    border-radius: 5px;
+}

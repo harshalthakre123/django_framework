@@ -11,3 +11,9 @@ class Student(models.Model):
     password=models.CharField(max_length=50)
     def __str__(self):
         return self.name
+    
+class Query(models.Model):
+    name=models.CharField(max_length=100)
+    email=models.EmailField()
+    query=models.CharField(max_length=255)
+    

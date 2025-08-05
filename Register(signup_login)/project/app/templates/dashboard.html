@@ -11,3 +11,41 @@ Dashboard
 </a>
 <br><br>
 <a href="{{data.document.url}}" download="download">download Document</a>
+<button><a href="{% url 'query' %}">Query</a></button>
+<button><a href="{% url 'showquery' %}">Show Query</a></button>
+<button type="submit"><a href="{% url 'logout' %}">Logout</a></button>
+{% if query %}
+<form action="{% url 'querydata' %}" method="post", enctype="multipart/form-data">
+    {% csrf_token %}
+    name: <input type="text" name="name" value="{{data.name}}" readonly><br>
+    email: <input type="text" name="email" value="{{data.email}}" readonly><br>
+    query: <input type="text" name="query"><br>
+    <input type="submit" value="query">
+</form>
+{% endif %}
+
+{% if allquery %}
+<table border="1">
+    <tr>
+        <th>S.no</th>
+        <th>id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Query</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    {% for i in allquery %}
+    <tr>
+        <td>{{forloop.counter}}</td>
+        <td>{{i.id}}</td>
+        <td>{{i.name}}</td>
+        <td>{{i.email}}</td>
+        <td>{{i.query}}</td>
+        <td><button><a href="">Edit</a></button></td>
+        <td><button><a href="">Delete</a></button></td>
+    </tr>
+    {% endfor %}
+</table>
+{% endif %}
+

@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.shortcuts import HttpResponse
+from django.shortcuts import redirect
 from app.models import Users
 
 # Create your views here.
@@ -47,7 +48,7 @@ def signup(req):
         data=Users.objects.filter(email=e)
         if data:
             msg="User Already Exist! Please Login."
-            return render(req, "registration.html", {"msg": msg})
+            return redirect("login")
         elif p==cp:
             Users.objects.create(f_name=fn, l_name=ln, email=e, contact=c, password=p)
             msg="Registration Successful, Please Login to Continue."
@@ -71,15 +72,11 @@ def login(req):
                 msg="Login Successful!"
                 return render(req, "homepg.html", {"msg":msg, "user_data":user_data})
             else:
-                msg="Email and password not matched!"
-                return render(req, "registration.html", {"signup_form": "signup_form","email":e} )
+                pmsg="Email and password not matched!"
+                return render(req, "registration.html", {"login_form": "login_form","email":e, "pmsg":pmsg} )
     return render(req, "registration.html", {"login_form": "login_form"})
 
 
-def logout(req):
-    pass
-    # login.user_data={}
-    # return render(req, "home.html",{"user_data ":user_data})
 
 
 

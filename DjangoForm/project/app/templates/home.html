@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="submit"><a href="{% url 'register' %}">Register</a></button>
+    {% if register %}
+    <br>
+    {{x.name.label}}{{x.name}}{{x.name.errors}} <hr/>
+    <!-- {{x.as_p}} <hr/>
+    {{x.as_table}} <hr/>
+    {{x.as_ul}} <hr/>
+    {{x.as_div}} <hr/> -->
+    {% endif %}
+    <button type="submit"><a href="">Login</a></button>
+</body>
+</html>

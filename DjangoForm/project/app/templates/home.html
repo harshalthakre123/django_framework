@@ -9,7 +9,12 @@
     <button type="submit"><a href="{% url 'register' %}">Register</a></button>
     {% if register %}
     <br>
-    {{x.name.label}}{{x.name}}{{x.name.errors}} <hr/>
+    <form action="{% url 'register' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{x}}
+        <button type="submit">Register</button>
+    </form>
+    <!-- {{x.name.label}}{{x.name}}{{x.name.errors}} <hr/> -->
     <!-- {{x.as_p}} <hr/>
     {{x.as_table}} <hr/>
     {{x.as_ul}} <hr/>

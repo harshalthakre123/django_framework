@@ -7,7 +7,7 @@
 </head>
 <body>
     <button type="submit"><a href="{% url 'register' %}">Register</a></button>
-    {% if register %}
+    {% if x %}
     <br>
     <form action="{% url 'register' %}" method="post" enctype="multipart/form-data">
         {% csrf_token %}
@@ -21,5 +21,14 @@
     {{x.as_div}} <hr/> -->
     {% endif %}
     <button type="submit"><a href="">Login</a></button>
+    <button type="submit"><a href="{% url 'showuser' %}">Show Users</a></button>
+    {% if data %}
+    {% for i in data %}
+    <br/>
+
+    {{i.name}}
+    {% endfor %}
+    <button><a href="{% url 'hidedata' %}">Hide data</a></button>
+    {% endif %}
 </body>
 </html>
